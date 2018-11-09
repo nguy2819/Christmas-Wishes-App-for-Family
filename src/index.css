@@ -6,9 +6,39 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: url(https://www.wallpapersrc.com/img/463e15304c7f48a987b7f4a98f5c86e1/red-and-green-mistletoe-christmas-decoration-2048x2732.jpg) no-repeat;
+  background-size: 100%;
+  background-position: bottom;
+  background-color: #A30008;
+  min-height: 100%;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.header-link {
+  background-color: #4A5C1B;
+}
+
+html{
+  min-height: 100%;
+}
+
+form{
+  padding: 20px;
+  margin-top: 60px;
+}
+
+form button, form h5{
+  margin: 20px 0;
+}
+
+input[type=text]:not(.browser-default):focus:not([readonly]),
+input[type=email]:not(.browser-default):focus:not([readonly]),
+input[type=password]:not(.browser-default):focus:not([readonly]),
+textaread.materialize-textarea:focus:not([readonly]){
+  border-color: #ec407a;
+  box-shadow: none;
 }
