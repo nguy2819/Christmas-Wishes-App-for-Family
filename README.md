@@ -8,4 +8,15 @@
 <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 ```
-- import BrowserRouter from 'react-router-dom' (npm install react-router-dom)
+- import BrowserRouter from 'react-router-dom' 
+> npm install react-router-dom
+
+- import React-Redux
+> npm install redux react-redux
+
+- In index.js file:
+```
+import {createStore} from 'redux';
+
+const store = createStore();
+```
