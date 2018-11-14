@@ -26,3 +26,4 @@ const store = createStore();
 
 - import Firebase (Firestore is a NoSQL database)
 > npm install firebase
+> npm install react-redux-firebase redux-firestore
