@@ -20,3 +20,6 @@ import {createStore} from 'redux';
 
 const store = createStore();
 ```
+
+- import [Redux Thunk](https://github.com/reduxjs/redux-thunk)
+> npm install redux-thunk
