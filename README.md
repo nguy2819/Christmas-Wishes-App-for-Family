@@ -30,3 +30,20 @@ const store = createStore();
 
 - import [Moment.js](http://momentjs.com/)
 > npm install moment
+
+- [Firestore Security Rules](https://firebase.google.com/docs/firestore/security/rules-structure)
+```
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /projects/{project} {
+      allow read, write: if request.auth.uid != null
+    }
+    match /users/{userId} {
+    	allow create
+      allow read: if request.auth.uid != null
+      allow write: if request.auth.uid == userId
+      allow delete: if request.auth.uid == userId
+    }
+  }
+}
+```
