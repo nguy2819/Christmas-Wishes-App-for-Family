@@ -18,6 +18,8 @@ const ProjectDetails = (props) => {
                 <p>
                     {project.christmaswishes}
                 </p>
+                <a class="btn-floating btn-small green darken-4 pulse right-align"><i class="material-icons">edit</i></a>
+                <a class="btn-floating btn-small red darken-4 pulse right"><i class="material-icons">delete</i></a>
             </div>
             <div className="card-action grey lighten-4 grey-text">
                 <div>Posted by <span className="pink-text">{project.authorFirstName} {project.authorLastName}</span></div>
