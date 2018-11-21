@@ -27,3 +27,6 @@ const store = createStore();
 - import Firebase (Firestore is a NoSQL database)
 > npm install firebase
 > npm install react-redux-firebase redux-firestore
+
+- import [Moment.js](http://momentjs.com/)
+> npm install moment
