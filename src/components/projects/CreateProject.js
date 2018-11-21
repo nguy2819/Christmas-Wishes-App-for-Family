@@ -36,7 +36,9 @@ export class CreateProject extends Component {
                 <textarea id="christmaswishes" className="materialize-textarea" onChange={this.handleChange}/>
             </div>
             <div className="input-field">
-                <button className="btn pink lighten-1 z-depth-0">Create</button>
+                <button className="btn pink lighten-1 z-depth-0">Create    
+                    <i class="material-icons right">send</i>
+                </button>
             </div>
         </form>
       </div>

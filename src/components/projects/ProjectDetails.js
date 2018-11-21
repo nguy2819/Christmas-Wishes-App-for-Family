@@ -14,13 +14,13 @@ const ProjectDetails = (props) => {
         <div className="container section project-details">
         <div className="card z-depth-0">
             <div className="card-content">
-                <span className="card-title">{project.title}</span>
+                <span className="card-title red-text text-darken-4">{project.title}</span>
                 <p>
                     {project.christmaswishes}
                 </p>
             </div>
             <div className="card-action grey lighten-4 grey-text">
-                <div>Posted by {project.authorFirstName} {project.authorLastName}</div>
+                <div>Posted by <span className="pink-text">{project.authorFirstName} {project.authorLastName}</span></div>
                 <div> {moment(project.createdAt.toDate().toString()).format('LLL')} </div>
             </div>
         </div>

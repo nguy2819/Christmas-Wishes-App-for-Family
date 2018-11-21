@@ -7,7 +7,11 @@ const Notification = (props) => {
         <div className="section">
             <div className="card z-depth-0">
                 <div className="card-content">
-                     <span className="card-title"> Notifications </span>
+                    <span className="card-title red-text text-darken-4">
+                        <a class="btn-floating btn-small waves-effect waves-light yellow accent-4">
+                            <i class="material-icons">notifications_active</i>
+                        </a> Notifications 
+                    </span>
                      <ul className="notifications">
                         {notifications && notifications.map(item => {
                             return (
