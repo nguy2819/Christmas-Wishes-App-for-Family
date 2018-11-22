@@ -4,7 +4,7 @@ const Footer = () => {
     return(
             <nav className="footer-copyright header-link">
                 <div className="container">
-                    © 2018 Tien Nguyen Borland
+                    © 2018 Tien Nguyen & David Borland
                 </div>
             </nav>
     )
