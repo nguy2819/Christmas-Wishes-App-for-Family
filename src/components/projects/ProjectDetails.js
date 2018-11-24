@@ -22,8 +22,19 @@ const ProjectDetails = (props) => {
                 </p>
                 {userId === authorId && (
                     <span>
-                        <a class="btn-floating btn-small green darken-4 pulse right-align"><i class="material-icons">edit</i></a>
-                        <a class="btn-floating btn-small red darken-4 pulse right"><i class="material-icons">delete</i></a>
+                        <button class="btn-floating btn-small green darken-4 pulse right-align"
+                            onClick={() => {
+                                
+                            }}>
+                            <i class="material-icons">edit</i>
+                        </button>
+                        <button class="btn-floating btn-small red darken-4 pulse right"
+                            onClick={async () =>{
+                                await props.firestore.delete('projects/' + project.uid);
+                                window.location.href = '/';
+                            }}>
+                            <i class="material-icons">delete</i>
+                        </button>
                     </span>
                 )}
                 
@@ -48,7 +59,10 @@ const mapStateToProps = (state, ownProps) => {
     console.log(state);
     const id = ownProps.match.params.id;
     const projects = state.firestore.data.projects;
-    const project = projects ? projects[id] : null
+    let project = projects ? projects[id] : null;
+    if(project){
+        project = Object.assign({uid: id}, project);
+    }
     return{
         project: project,
         auth: state.firebase.auth
