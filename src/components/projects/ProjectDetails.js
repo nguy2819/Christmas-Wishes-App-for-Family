@@ -23,8 +23,8 @@ const ProjectDetails = (props) => {
                 {userId === authorId && (
                     <span>
                         <button class="btn-floating btn-small green darken-4 pulse right-align"
-                            onClick={() => {
-                                
+                            onClick={async() => {
+                                await props.firestore.update('projects/' + project.uid, project);
                             }}>
                             <i class="material-icons">edit</i>
                         </button>
