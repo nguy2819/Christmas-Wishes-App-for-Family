@@ -20,6 +20,9 @@ const ProjectDetails = (props) => {
                 <p>
                     {project.christmaswishes}
                 </p>
+                <p>
+                    Link of the product that <span className="pink-text">{project.authorFirstName}</span> likes: <span className="blue-text">{project.link}</span>
+                </p>
                 {userId === authorId && (
                     <span>
                         <button class="btn-floating btn-small green darken-4 pulse right-align"
@@ -37,6 +40,14 @@ const ProjectDetails = (props) => {
                         </button>
                     </span>
                 )}
+                    <form action="#">
+                        <p>
+                            <label>
+                            <input type="checkbox" class="filled-in" id="filled-in-box" checked="checked"/>
+                            <span className="black-text">Anonymous will get this gift for {project.authorFirstName}</span>
+                            </label>
+                        </p>
+                    </form>
                 
             </div>
             <div className="card-action grey lighten-4 grey-text">
@@ -49,6 +60,9 @@ const ProjectDetails = (props) => {
     } else{
         return (
             <div className="container center">
+                <div class="progress">
+                    <div class="indeterminate"></div>
+                </div>
                 <p>Loading Christmas Wishes"</p>
             </div>
         )
